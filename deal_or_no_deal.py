@@ -369,7 +369,7 @@ while not end_game:
                     elif top_amts_gone != 7:
                         print("Don't fret: even though $" + str("{:,}".format(int(''.join(filter(str.isdigit,choice_amt))))) + " is gone, " + str((7-top_amts_gone)) + " of the top 7 amounts are still available.") 
                         time.sleep(2.5)
-                        if int(''.join(filter(str.isdigit,choice_amt))) == max(case_values_int_sorted):
+                        if int(''.join(filter(str.isdigit,choice_amt))) != max(case_values_int_sorted):
                            print("Including $" + str("{:,}".format(case_values_int_sorted[len(case_values_int_sorted)-2])) + "!")
                     time.sleep(4.5)
                 if int(''.join(filter(str.isdigit,choice_amt))) == case_values_int_sorted[len(case_values_int_sorted)-2] and int(''.join(filter(str.isdigit,choice_amt))) < 100000:
